@@ -1,0 +1,169 @@
+    1  yum update -y
+    2  yum install httpd -y
+    3  hostname
+    4  hostname chefserver
+    5  hostname
+    6  hostname chefserver
+    7  hostname
+    8  yum install wget -y
+    9  cd /home/
+   10  wget https://packages.chef.io/files/stable/chef-server/13.0.17/el/7/chef-server-core-13.0.17-1.el7.x86_64.rpm
+   11  ll
+   12  rpm -Uvh chef-server-core-13.0.17-1.el7.x86_64.rpm
+   13  df -h
+   14  ls
+   15  cd
+   16  ls
+   17  cd /home
+   18  ls
+   19  chef-server-ctl status
+   20  chef-server-ctl reconfigure
+   21  systemctl status nginx
+   22  chef-server-ctl reconfigure
+   23  free -m
+   24  chef-server-ctl reconfigure
+   25  hostname
+   26  iptables -L
+   27  chef-server-ctl install chef-manage
+   28  chef-server-ctl reconfigure
+   29  chef-manage-ctl reconfigure 
+   30  chef-server-ctl --help
+   31  chef-server-ctl user-create chefadmin my chef super user nidhish@example.com qwerty --filename chefadmin.pem
+   32  chef-server-ctl user-create chefadmin my chef super user nidhish@example.com qwerty --filename chefadmin.pem
+   33  chef-server-ctl user-create chefadmin chef super user nidhish@example.com qwerty --filename chefadmin.pem
+   34  passwd ec2-user
+   35  vi /etc/ssh/sshd_config 
+   36  hostname
+   37  chef-server-ctl status
+   38  chef-server-ctl status
+   39  chef-server-ctl chef-manage
+   40  history 
+   41  chef-server-ctl status
+   42  hostname
+   43  ip a
+   44  history 
+   45  hostname chef.server.com
+   46  hostname
+   47  hostname
+   48  history 
+   49  ifconfig 
+   50  history 
+   51  chef-server-ctl status
+   52  chef-server-ctl manage
+   53  hostname
+   54  history 
+   55  hostname
+   56  hostname chef.server.com
+   57  hostname
+   58  sudo su
+   59  hostname
+   60  java
+   61  yum install java-1.8.0-openjdk-devel
+   62  java -version
+   63  curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+   64  curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+   65  sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+   66  yum install jenkins
+   67  cat /etc/passwd
+   68  cd /var/lib/jenkins/
+   69  systemctl start jenkins
+   70  systemctl enable jenkins
+   71  systemctl status jenkins
+   72  cd secrets/
+   73  ls
+   74  cat initialAdminPassword
+   75  yum install git
+   76  cd /var/lib/jenkins/workspace/
+   77  ls
+   78  cd apache-service/
+   79  ls
+   80  pwd
+   81  ls
+   82  systemctl status docker
+   83  yum install -y yum-utils   device-mapper-persistent-data   lvm2
+   84  yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+   85  yum install docker-ce docker-ce-cli containerd.io
+   86  systemctl start docker
+   87  systemctl enable docker
+   88  systemctl status docker
+   89  docker images
+   90  su - jenkins
+   91  vi /etc/group
+   92  cat /etc/group
+   93  cat /etc/passwd
+   94  vi /etc/passwd
+   95  su - jenkins
+   96  systemctl restart jenkins
+   97  systemctl status jenkins
+   98  docker images
+   99  pip3 --version
+  100  python --version
+  101  curl -O https://bootstrap.pypa.io/get-pip.py
+  102  python get-pip.py --user
+  103  ls
+  104  ls ~/.local/bin
+  105  export PATH=~/.local/bin:$PATH
+  106  source ~/.bash_profile
+  107  pip3 install awscli --upgrade
+  108  pip install awscli --upgrade
+  109  aws --version
+  110  pwd
+  111  cd
+  112  vi aws_access.txt
+  113  cat aws_access.txt 
+  114  aws configure
+  115  aws ec2 --help
+  116  aws help
+  117  aws ec2 help
+  118  aws ec2 describe-instances
+  119  aws ecr get-login --no-include-email --region us-east-1
+  120  docker login -u AWS -p eyJwYXlsb2FkIjoib2pOcVArcXliT05EdUNlb09JZzl5OWg1YW5VVlY4bEpIMURqdFJnLzhrQjJrY3o1SWo5UUFDd3B1eER5S0d1NlhXMFpFekNqdi80TGZndGZHTEE0bVF0amt4cjZMMll1S1JiU3E2V0NmK3FydjIvNDEyRTE4aFZrTkVkb2RacDYyMGFNQnl2dUZtVml0WnRGcXZ4Qm1tS3BUajZ2U0NBcHR5MWZSVC9kYmd5a0k1WGRzZXNjL0pCL1BweVI2ZmI3V2pkV21JSnpvRTFETmRBRXdnVHRlTm1oWjUvc0FOVTg0TXJNYlpJalRmM0ZhR2dzL2hvcEM3WWhKREQ2OHJJcEQySW4wSEFwSzN6N1JVeS8vT1FwM2JLV3hkZFZBNG9VNEJVM0VSQzM1d2xyM1B2OGFMUFJWS2NvTUFBMytVZHpWcllRWlJWbU96MnNkUGJkNjUzUC9zdG83cDB5US9sVzF5bHNPQmdGMmFsb3A0K2tFblczRk1pUlp6ZXVKZGFWcDZFeTA1SFlsRFp6bXdTdjRaK1U1L09GclA0ZHUrbEcxNkVDU3ZTUDlCMXJpUUszTUVsQUZINDFMcTl6c1RzcXRQZVp4dHRQcDFXS1AySlJ0UkJDNG4vanlxSzJ6dDFEay9SejFCVktyVXlVeUFUVzF2MXg5OXoydnpHTFp0ZU1BcGFJZmVSQkQ1a2ovekhiQzZXT3gwMGk3eXdiaFZZVzBOS0NKL2ZNKzk2dFIwK1lWN3J6NzR5dkc5dUhaeHpiS2R1NHBaSUVtdjQ5SjMwK2VnY3pKQjBlNEpwdW5iZ1JpL0xFMkFISFNOZzVaajdiZmVLVTd6eXdIQUpSb2N4VEtyY2IyOHo2UEttQkVNWVlicGQ3dmlIVFNvVlhoUU1Idm9odmR3MGd2cFRoZUtzL1RNV2xNMmNRYXc4QThwK3BOUU5XMWxiSEtNUmtLZC94QjJvbHU0b211NHhJMk1NUEtzS2FFS2xWeTRFTnVGOVI2YzZ1WVpxa2tmYStHT3JkVWYzMTc1aWlHTnNQeGliQ2tUTmtCVllHY3N3VXY0a3NYSjltc3FpWURtb3E0azlDZ1JEcmVYZmQxVmJLTGI5QjI0dGlNMFFCd1pxa3ozdjV1bGdnV1ZjOC9saVVGMWxpTG5Wcm03c0VsOE1iVkowVWZhKzVpR3J2NkgyTmZYbXN4WTA4K1ZrMHR4REFXTUY0QWdyWWJLYTU4V0hxcTZ1TGtRYitUZ0IyYmZ1SkJqR2JkT29JbncrZGVJT3huZVM2Z1ZFSW5LY0VRWWtEL3VPUVVFanZqQ3BsZEMvOUJJOUNEUmQrOGp6bkg1dWlKL01XTWVGNXpyaU5wNDVJSTZhNmduVXdFalZDeEtqdWo3NG9Nemd6dGNnam05U0lxbC9hU2M3ak1mQkRlR2h5eTZiSGJNR3hqc1NJWkF2NHhpVjlDVzNxTmJoUTQ1NFlEQmltcEhnNXV2Y3EiLCJkYXRha2V5IjoiQVFFQkFIaHdtMFlhSVNKZVJ0Sm01bjFHNnVxZWVrWHVvWFhQZTVVRmNlOVJxOC8xNHdBQUFINHdmQVlKS29aSWh2Y05BUWNHb0c4d2JRSUJBREJvQmdrcWhraUc5dzBCQndFd0hnWUpZSVpJQVdVREJBRXVNQkVFRERVUk5lQUt2UXo3b2NHYkJnSUJFSUE3VnpFSnNyOGNEU0FyRlVMZERTZGRzNjgrWHdlaTJNNklhZW96bjhhVmVtQXA3Q0NHcll1S3BCS0VpNkl6MkovOG84YkNJRll6ZVFkTVdnND0iLCJ2ZXJzaW9uIjoiMiIsInR5cGUiOiJEQVRBX0tFWSIsImV4cGlyYXRpb24iOjE1NzM3MDMyMzN9 https://314933227751.dkr.ecr.us-east-1.amazonaws.com
+  121  docker images
+  122  docker tag apache-server-image:latest 314933227751.dkr.ecr.us-east-1.amazonaws.com/apache-images:v1
+  123  docker push 314933227751.dkr.ecr.us-east-1.amazonaws.com/apache-images:v1
+  124  history
+  125  history
+  126  su - jenkins
+  127  cat /root/.aws/config 
+  128  cat /root/.aws/credentials 
+  129  su - jenkins
+  130  docker push 314933227751.dkr.ecr.us-east-1.amazonaws.com/apache-images:v1.0.0
+  131  ecr_login="aws ecr get-login --no-include-email --region us-east-1"
+  132  eval $ecr_login
+  133  docker push 314933227751.dkr.ecr.us-east-1.amazonaws.com/apache-images:v1.0.0
+  134  eval "$(aws ecr get-login --no-include-email --region us-east-1)"
+  135  docker push 314933227751.dkr.ecr.us-east-1.amazonaws.com/apache-images:v1.0.0
+  136  history 
+  137  85  yum install docker-ce docker-ce-cli containerd.io
+  138     86  systemctl start docker
+  139     87  systemctl enable docker
+  140     88  systemctl status docker
+  141     89  docker images
+  142     90  su - jenkins
+  143     91  vi /etc/group
+  144     92  cat /etc/group
+  145     93  cat /etc/passwd
+  146     94  vi /etc/passwd
+  147     95  su - jenkins
+  148     96  systemctl restart jenkins
+  149     97  systemctl status jenkins
+  150     98  docker images
+  151     99  pip3 --version
+  152    100  python --version
+  153    101  curl -O https://bootstrap.pypa.io/get-pip.py
+  154    102  python get-pip.py --user
+  155    103  ls
+  156    104  ls ~/.local/bin
+  157    105  export PATH=~/.local/bin:$PATH
+  158    106  source ~/.bash_profile
+  159    107  pip3 install awscli --upgrade
+  160    108  pip install awscli --upgrade
+  161    109  aws --version
+  162    110  pwd
+  163    111  cd
+  164  history 
+  165  git clone https://github.com/Nidhishd/jenkins_test.git
+  166  ll
+  167  cd jenkins_test/
+  168  history 
+  169  history >> test45.txt
