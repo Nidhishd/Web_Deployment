@@ -15,7 +15,7 @@ node {
 	sudo docker stop challenge
 	fi
 	sudo docker rm challenge
-	sudo ansible-playbook -i hosts testansible.yml
+	ansible-playbook -i hosts testansible.yml
 	'''
 	
 }
