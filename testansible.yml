@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: creating docker container using docker image
+    command: docker run -d -it -p 8082:3000 --name challenge challenge
+    args:
+      chdir: /var/lib/jenkins/workspace/Challenge_Testing/
