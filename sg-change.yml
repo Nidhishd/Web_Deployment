@@ -11,9 +11,6 @@
     ec2_group_description: 'launch-wizard-9 created 2020-04-12T09:02:28.822+05:30'
     ec2_group_name: launch-wizard-9
 
-  vars_files:
-    - vars/aws_config.yml
-
   tasks:
     - name: Change security group
       ec2_group:
