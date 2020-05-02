@@ -10,7 +10,7 @@ node {
 	
 	stage 'Start app'
 	sh '''#!/bin/bash -x
-	if [ $(sudo docker inspect -f '{{.State.Running}}' challenge) = "true" ]
+	if [ $(sudo docker container inspect --format='{{json .State}}' challenge) = "true" ]
 	then
 	sudo docker stop challenge
 	fi
