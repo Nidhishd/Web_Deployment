@@ -6,7 +6,7 @@
 
   - name: remove docker images
     command: docker rmi nidhishd/challenge
-    ignore_errors= yes
+#    ignore_errors= yes
     args:
       chdir: /var/lib/jenkins/workspace/Challenge_Testing
 
