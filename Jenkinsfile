@@ -10,12 +10,12 @@ node {
 	
 	stage 'Start app'
 	sh '''#!/bin/bash -x
-	if [ "$(docker ps -q -f name=challenge)" ]; then
-        if [ "$(docker ps -aq -f status=exited -f name=challenge)" ]; then
-        docker rm challenge
+	if [ "$(sudo docker ps -q -f name=challenge)" ]; then
+        if [ "$(sudo docker ps -aq -f status=exited -f name=challenge)" ]; then
+        sudo docker rm challenge
         fi
-    	docker stop challenge
-    	docker rm challenge
+    	sudo docker stop challenge
+    	sudo docker rm challenge
 	fi
         '''        
 
