@@ -2,6 +2,8 @@
 - hosts: all
   become: true
   tasks:
+  - name: remove docker images
+    command: docker rmi nidhishd/challenge
   - name: Login to Docker
     command: docker login
   - name: Pull docker images from DockerHub
