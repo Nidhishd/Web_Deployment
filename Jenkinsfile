@@ -15,7 +15,9 @@ node {
 	sudo docker stop challenge
 	fi
 	sudo docker rm challenge
-
+        '''
+	
+	
         stage 'Build Container through Playbook'
 	sh '''#!/bin/bash -x
 	sudo ansible-playbook /var/lib/jenkins/workspace/Challenge_Testing/testansible.yml  -i  /var/lib/jenkins/workspace/Challenge_Testing/hosts -b --become-user root
