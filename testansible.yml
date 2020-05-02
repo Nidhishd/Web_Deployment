@@ -6,10 +6,6 @@
   
   - name: Pull dcoker images from DockerHub
     command: docker pull nidhishd/challenge
-    args:
-      chdir: /var/lib/jenkins/workspace/Challenge_Testing
 
   - name: creating docker container using docker images
     command: docker run -d -it -p 8082:3000 --name challenge challenge
-    args:
-      chdir: /var/lib/jenkins/workspace/Challenge_Testing
