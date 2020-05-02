@@ -5,15 +5,15 @@
   tasks:
 
   - name: remove docker images
-   command: docker rmi nidhishd/challenge
-   ignore_errors= yes
-   args:
+    command: docker rmi nidhishd/challenge
+    ignore_errors= yes
+    args:
       chdir: /var/lib/jenkins/workspace/Challenge_Testing
 
   
   - name: Pull dcoker images from DockerHub
-   command: docker pull nidhishd/challenge
-   args:
+    command: docker pull nidhishd/challenge
+    args:
       chdir: /var/lib/jenkins/workspace/Challenge_Testing
 
 
