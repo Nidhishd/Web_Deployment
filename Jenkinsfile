@@ -17,6 +17,11 @@ node {
 	sudo docker rm challenge
         '''        
 
+        stage 'Push Image to DockerHub'
+	sh '''#!/bin/bash -x
+	docker push nidhishd/challenge	
+	'''
+
 
         stage 'Build Container through Playbook'
 	sh '''#!/bin/bash -x
