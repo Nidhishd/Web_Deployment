@@ -5,7 +5,7 @@
   tasks:
   
   - name: Pull dcoker images from DockerHub
-    command: docker pull nidhishd/challenge
+    command: sudo docker pull nidhishd/challenge
 
   - name: creating docker container using docker images
-    command: docker run -d -it -p 8082:3000 --name challenge challenge
+    command: sudo docker run -d -it -p 8082:3000 --name challenge challenge
