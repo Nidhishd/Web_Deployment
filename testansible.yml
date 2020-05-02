@@ -10,18 +10,3 @@
     command: docker pull nidhishd/challenge
   - name: creating docker container using docker images
     command: docker run -d -it -p 8082:3000 --name challenge challenge
-  - name: List docker
-    command: docker ps
-  - name: example using security group rule descriptions
-    ec2_group:
-      name: "{{ name }}"
-      description: sg with rule descriptions
-      vpc_id: vpc-9834a3e2
-      profile: "{{ aws_profile }}"
-      region: us-east-1
-      rules:
-        - proto: tcp
-          ports:
-          - 8081
-          cidr_ip: 0.0.0.0/0
-          rule_desc: allow all on port 8081
