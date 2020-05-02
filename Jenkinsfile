@@ -21,7 +21,7 @@ node {
 
         stage 'Push Image to DockerHub'
 	sh '''#!/bin/bash -x
-#	docker push nidhishd/challenge	
+	sudo docker push nidhishd/challenge	
 	'''
 
 
