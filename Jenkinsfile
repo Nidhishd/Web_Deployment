@@ -22,7 +22,7 @@ node {
 
         stage 'Build Container through Playbook'
 	sh '''#!/bin/bash -x
-	ansible-playbook /var/lib/jenkins/workspace/Challenge_Testing/testansible.yml  -i  /var/lib/jenkins/workspace/Challenge_Testing/hosts -b --become-user root
+	ansible-playbook /var/lib/jenkins/workspace/Challenge_Testing/testansible.yml  -i  /var/lib/jenkins/workspace/Challenge_Testing/hosts -b 
 	'''
 	
 }
