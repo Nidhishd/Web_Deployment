@@ -1,0 +1,23 @@
+
+  vars:
+    rule_list:
+      - { proto: tcp, from_port: 80, to_port: up, cidr_ip: 10.0.0.1/32 }
+      - { proto: tcp, from_port: 443, to_port: 443, cidr_ip: 10.0.0.1/32 }
+    ec2_group_region: eu-west-1
+    ec2_group_vpc: 'vpc-XXXXXXX'
+    ec2_group_description: 'This is a description'
+    ec2_group_name: security_group_name
+
+  vars_files:
+    - vars/aws_config.yml
+
+  tasks:
+    - name: Change security group
+      ec2_group:
+        name: '{{ ec2_group_name }}'
+        description: '{{ ec2_group_description }}'
+        vpc_id: '{{ ec2_group_vpc }}'
+        aws_access_key: '{{ access_key }}'
+        aws_secret_key: '{{ secret_key }}'
+        region: '{{ ec2_group_region }}'
+        rules: '{{ rule_list }}'
