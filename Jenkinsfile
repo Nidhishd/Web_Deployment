@@ -10,11 +10,13 @@ node {
 	
 	stage 'Start app'
 	sh '''#!/bin/bash -x
-	if [ $(sudo docker inspect -f '{{.State.Running}}' challenge) = "true" ]
-	then
-	sudo docker stop challenge
+	if [ "$(sudo docker ps -q -f name=challenge)" ]; then
+        if [ "$(sudo docker ps -aq -f status=exited -f name=challenge)" ]; then
+        sudo docker rm challenge
+        fi
+    	sudo docker stop challenge
+    	sudo docker rm challenge
 	fi
-	sudo docker rm challenge
         '''        
 
         stage 'Push Image to DockerHub'
@@ -25,7 +27,7 @@ node {
 
         stage 'Build Container through Playbook'
 	sh '''#!/bin/bash -x
-	sudo ansible-playbook /var/lib/jenkins/workspace/Challenge_Testing/testansible.yml  -i  /var/lib/jenkins/workspace/Challenge_Testing/hosts -b --become-user ansadmin
+	/usr/local/bin/ansible-playbook /var/lib/jenkins/workspace/Challenge_Testing/testansible.yml  -i  /var/lib/jenkins/workspace/Challenge_Testing/hosts -b --become-user ansadmin
 	'''
 	
 }
