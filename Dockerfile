@@ -8,7 +8,9 @@ WORKDIR /challenge
 
 COPY app/ /challenge 
 
-RUN npm install 
+RUN npm install
+
+RUN npm install express-ipfilter
 
 RUN npm run build
 
