@@ -13,20 +13,16 @@ http.createServer(function (req, res)
                   )
 
 // Init dependencies
-var express = require('express')
-    , ipfilter = require('express-ipfilter')
-    , app = express.createServer()
-    ;
-
+const express = require('express')
+const ipfilter = require('express-ipfilter').IpFilter
+ 
 // Blacklist the following IPs
-// Now this can block "::1" IP , editor: Fish
-var ips = ['43.229.90.48'];
-
+const ips = ['43.229.90.48']
+ 
 // Create the server
-app.use(ipfilter(ips));
-app.listen(3000);
+app.use(ipfilter(ips))
+app.listen(3000)
 
-  
 const Home = () => (
   <div>
     <Head title="Home" />
