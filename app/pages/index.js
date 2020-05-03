@@ -12,17 +12,6 @@ http.createServer(function (req, res)
 }
                   )
 
-// Init dependencies
-const express = require('express')
-const ipfilter = require('express-ipfilter').IpFilter
- 
-// Blacklist the following IPs
-const ips = ['43.229.90.48']
- 
-// Create the server
-app.use(ipfilter(ips))
-app.listen(3000)
-
 const Home = () => (
   <div>
     <Head title="Home" />
